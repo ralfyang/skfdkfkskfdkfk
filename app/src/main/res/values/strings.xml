@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Grevu</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="btn_facebook">페이스북</string>
+    <string name="btn_twitter">트위터</string>
+
+    <!-- 테스트 데이터 -->
+    <string name="app_id">663674007080454</string>
+    <string name="title_activity_grevu_map">GrevuMapActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_complete">완료</string>
+    <string name="title_cancel">취소</string>
+    <string name="title_activity_poi_result">PoiResultActivity</string>
+
+    <string name="descr_image">Image</string>
+
+</resources>

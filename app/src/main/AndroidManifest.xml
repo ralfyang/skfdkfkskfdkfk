@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.grevu.app" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name=".GravuApplication">
+        <activity
+            android:name=".IntroActivity"
+            android:noHistory="true"
+            android:theme="@style/noAnimTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 로그인 -->
+        <activity
+            android:name="com.grevu.app.view.LoginActivity"
+            android:theme="@style/noAnimTheme" />
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:label="@string/app_name" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <!-- 카테고리 -->
+        <activity
+            android:name="com.grevu.category.CategoryActivity"
+            android:theme="@style/noAnimTheme" />
+        <activity
+            android:name="com.grevu.item.ItemListActivity"
+            android:theme="@style/noAnimTheme" />
+        <activity
+            android:name="com.grevu.item.DescItemActivity"
+            android:theme="@style/noAnimTheme"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <!-- 지도 -->
+        <activity
+            android:name="com.grevu.map.GrevuMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/noAnimTheme" >
+        </activity>
+        <activity
+            android:name="com.grevu.map.PoiResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/noAnimTheme" >
+        </activity>
+    </application>
+</manifest>

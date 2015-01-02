@@ -1,0 +1,173 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Manifest Merging:
+-----------------
+Your project uses libraries that provide manifests, and your Eclipse
+project did not explicitly turn on manifest merging. In Android Gradle
+projects, manifests are always merged (meaning that contents from your
+libraries' manifests will be merged into the app manifest. If you had
+manually copied contents from library manifests into your app manifest
+you may need to remove these for the app to build correctly.
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From FCCLauncherLibrary:
+* build.xml
+* proguard-project.txt
+From FacebookSDK:
+* build.xml
+From gsshop-android:
+* .ruleset
+* analysis.xml
+* build.xml
+* changelog.txt
+* custom_rules.xml
+* etc\
+* etc\LICENSE-Apache
+* etc\LICENSE-Mocha
+* etc\LICENSE-UIL
+* etc\LICENSE-ZBar
+* etc\formatter_gsshop.xml
+* gsshop.keystore
+* proguard\
+* proguard\dump.txt
+* proguard\mapping.txt
+* proguard\seeds.txt
+* proguard\usage.txt
+* test\
+* test\MochaTestSuites.mts
+* test\README.txt
+* test\RunTest.bat
+* test\cleanup.mt
+* test\monkeytalk-agent-1.0.8.beta4c.jar
+* test\monkeytalk-runner-1.0.8.beta4c.jar
+From mocha-res-android:
+* LICENSE-Mocha
+* build.xml
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:19.1.0
+
+Replaced Libraries with Dependencies:
+-------------------------------------
+The importer recognized the following library projects as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the source files in your project were of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the library replacement in the import wizard and try
+again:
+
+google-play-services_lib => [com.google.android.gms:play-services:+]
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In FCCLauncherLibrary:
+* AndroidManifest.xml => fCCLauncherLibrary\src\main\AndroidManifest.xml
+* assets\ => fCCLauncherLibrary\src\main\assets\
+* libs\fcclauncher.jar => fCCLauncherLibrary\libs\fcclauncher.jar
+* lint.xml => fCCLauncherLibrary\lint.xml
+* res\ => fCCLauncherLibrary\src\main\res\
+* src\ => fCCLauncherLibrary\src\main\java\
+In mocha-res-android:
+* AndroidManifest.xml => mocharesandroid\src\main\AndroidManifest.xml
+* assets\ => mocharesandroid\src\main\assets\
+* res\ => mocharesandroid\src\main\res\
+* src\ => mocharesandroid\src\main\java\
+In gsshop-android:
+* AndroidManifest.xml => gsshopandroid\src\main\AndroidManifest.xml
+* assets\ => gsshopandroid\src\main\assets\
+* libs\android-query.0.24.3.jar => gsshopandroid\libs\android-query.0.24.3.jar
+* libs\appconversionsdk.jar => gsshopandroid\libs\appconversionsdk.jar
+* libs\armeabi-v7a\libiconv.so => gsshopandroid\src\main\jniLibs\armeabi-v7a\libiconv.so
+* libs\armeabi-v7a\libzbarjni.so => gsshopandroid\src\main\jniLibs\armeabi-v7a\libzbarjni.so
+* libs\armeabi\libiconv.so => gsshopandroid\src\main\jniLibs\armeabi\libiconv.so
+* libs\armeabi\libzbarjni.so => gsshopandroid\src\main\jniLibs\armeabi\libzbarjni.so
+* libs\aspectjrt-1.7.jar => gsshopandroid\libs\aspectjrt-1.7.jar
+* libs\cashslide-sdk-0804.jar => gsshopandroid\libs\cashslide-sdk-0804.jar
+* libs\comasG.jar => gsshopandroid\libs\comasG.jar
+* libs\eventbus-2.1.0-beta-1.jar => gsshopandroid\libs\eventbus-2.1.0-beta-1.jar
+* libs\facebook.jar => gsshopandroid\libs\facebook.jar
+* libs\google-cloud-messaging-client-1.0.jar => gsshopandroid\libs\google-cloud-messaging-client-1.0.jar
+* libs\GoogleConversionTrackingSdk-2.1.0.jar => gsshopandroid\libs\GoogleConversionTrackingSdk-2.1.0.jar
+* libs\guice-3.0-no_aop.jar => gsshopandroid\libs\guice-3.0-no_aop.jar
+* libs\IgawCommon_v3.3.7a.jar => gsshopandroid\libs\IgawCommon_v3.3.7a.jar
+* libs\InMobiAnalytics-4.4.3.jar => gsshopandroid\libs\InMobiAnalytics-4.4.3.jar
+* libs\jackson-core-asl-1.9.12.jar => gsshopandroid\libs\jackson-core-asl-1.9.12.jar
+* libs\jackson-mapper-asl-1.9.12.jar => gsshopandroid\libs\jackson-mapper-asl-1.9.12.jar
+* libs\javax.inject-1.jar => gsshopandroid\libs\javax.inject-1.jar
+* libs\jsr305-1.3.9.jar => gsshopandroid\libs\jsr305-1.3.9.jar
+* libs\libGoogleAnalyticsV3.jar => gsshopandroid\libs\libGoogleAnalyticsV3.jar
+* libs\mezzo_adtracking_sdk_android.jar => gsshopandroid\libs\mezzo_adtracking_sdk_android.jar
+* libs\MobileAppTracker-3.4.jar => gsshopandroid\libs\MobileAppTracker-3.4.jar
+* libs\mocha-2.3.jar => gsshopandroid\libs\mocha-2.3.jar
+* libs\MTrackerSDK_NP_GI_ver_1.1.jar => gsshopandroid\libs\MTrackerSDK_NP_GI_ver_1.1.jar
+* libs\org.eclipse.paho.client.mqttv3.jar => gsshopandroid\libs\org.eclipse.paho.client.mqttv3.jar
+* libs\pms-sdk.jar => gsshopandroid\libs\pms-sdk.jar
+* libs\roboguice-2.0.jar => gsshopandroid\libs\roboguice-2.0.jar
+* libs\spring-android-auth-1.0.1.RELEASE.jar => gsshopandroid\libs\spring-android-auth-1.0.1.RELEASE.jar
+* libs\spring-android-core-1.0.1.RELEASE.jar => gsshopandroid\libs\spring-android-core-1.0.1.RELEASE.jar
+* libs\spring-android-rest-template-1.0.1.RELEASE.jar => gsshopandroid\libs\spring-android-rest-template-1.0.1.RELEASE.jar
+* libs\spring-security-crypto-3.1.3.RELEASE.jar => gsshopandroid\libs\spring-security-crypto-3.1.3.RELEASE.jar
+* libs\tapjoyconnectlibrary-10.1.1.jar => gsshopandroid\libs\tapjoyconnectlibrary-10.1.1.jar
+* libs\tnkad-sdk-5.5.jar => gsshopandroid\libs\tnkad-sdk-5.5.jar
+* libs\volley.jar => gsshopandroid\libs\volley.jar
+* libs\wisetracker_r_1.0.2.jar => gsshopandroid\libs\wisetracker_r_1.0.2.jar
+* libs\xstream-1.4.4.jar => gsshopandroid\libs\xstream-1.4.4.jar
+* libs\zbar-0.2.jar => gsshopandroid\libs\zbar-0.2.jar
+* lint.xml => gsshopandroid\lint.xml
+* proguard-project.txt => gsshopandroid\proguard-project.txt
+* res\ => gsshopandroid\src\main\res\
+* src\ => gsshopandroid\src\main\java\
+* src\gsshop\mobile\v2\user\easylogin\AuthInfo.aidl => gsshopandroid\src\main\aidl\gsshop\mobile\v2\user\easylogin\AuthInfo.aidl
+* src\gsshop\mobile\v2\user\easylogin\IEasyLoginService.aidl => gsshopandroid\src\main\aidl\gsshop\mobile\v2\user\easylogin\IEasyLoginService.aidl
+* src\gsshop\mobile\v2\user\easylogin\IVirtualDevicesKeyService.aidl => gsshopandroid\src\main\aidl\gsshop\mobile\v2\user\easylogin\IVirtualDevicesKeyService.aidl
+* src\gsshop\mobile\v2\user\easylogin\VirtualDevicesKeyData.aidl => gsshopandroid\src\main\aidl\gsshop\mobile\v2\user\easylogin\VirtualDevicesKeyData.aidl
+In FacebookSDK:
+* AndroidManifest.xml => facebookSDK\src\main\AndroidManifest.xml
+* res\ => facebookSDK\src\main\res\
+* src\ => facebookSDK\src\main\java\
+
+Missing Google Repository:
+--------------------------
+The Google Play Services library is installed from a special Maven
+Repository, which should be installed via the SDK manager.
+
+It looks like this library is missing from your SDK installation at:
+D:\jhkim\adt-bundle\sdk
+
+To install it, open the SDK manager, and in the Extras category,
+select "Google Repository".
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)
